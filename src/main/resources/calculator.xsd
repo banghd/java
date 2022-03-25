@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="test"
+            xmlns:tns="test"
+            elementFormDefault="qualified">
+
+    <xsd:element name="CalculatorRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="op" type="xsd:string"/>
+                <xsd:element name="first" type="xsd:float"/>
+                <xsd:element name="second" type="xsd:float"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="Response">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="result" type="xsd:float" />
+                <xsd:element name="message" type="xsd:string" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

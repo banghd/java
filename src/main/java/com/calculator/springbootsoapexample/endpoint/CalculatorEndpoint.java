@@ -23,8 +23,7 @@ public class CalculatorEndpoint {
     }
     @PayloadRoot(namespace = NAMESPACE, localPart = "CalculatorRequest")
     @ResponsePayload
-    public Response getLoanStatus(@RequestPayload @NotNull CalculatorRequest request) {
-        System.out.println(request.getFirst());
+    public Response getResult(@RequestPayload @NotNull CalculatorRequest request) {
         Response response = new Response();
         response.setMessage(this.calculatorService.calculate(request).getMessage());
         response.setResult(this.calculatorService.calculate(request).getResult());

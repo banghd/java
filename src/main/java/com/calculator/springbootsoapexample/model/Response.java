@@ -10,10 +10,10 @@ import javax.xml.bind.annotation.XmlType;
         "result",
         "message"
 })
-@XmlRootElement(name = "Response")
+@XmlRootElement(name = "Response", namespace = "http://www.baeldung.com/springsoap/gen")
 public class Response {
 
-    private String message;
+    private String message = "ok";
     private float result;
 
     public float getResult() {

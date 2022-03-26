@@ -11,11 +11,11 @@ import javax.xml.bind.annotation.XmlType;
         "first",
         "second"
 })
-@XmlRootElement(name = "Response")
+@XmlRootElement(namespace = "http://www.baeldung.com/springsoap/gen",name = "CalculatorRequest")
 public class CalculatorRequest {
-    private float second;
-    private float first;
-    private String op;
+    private float second = 1;
+    private float first = 2;
+    private String op = "+";
 
     public String getOp() {
         return op;

@@ -10,24 +10,13 @@ public class CalculatorService {
         Response resp = new Response();
         float first = request.getFirst();
         float second = request.getSecond();
-        switch (request.getOp()){
-            case "+":
-                resp.setResult(first + second);
-                break;
-            case "-":
-                resp.setResult(first - second);
-                break;
-            case "*":
-                resp.setResult(first * second);
-                break;
-            case "/":
-                resp.setResult(first/second);
-                break;
-            case "^":
-                resp.setResult((float) Math.pow((double) first,(double) second));
-                break;
-            default:
-                resp.setMessage("invalid operator");
+        switch (request.getOp()) {
+            case "+" -> resp.setResult(first + second);
+            case "-" -> resp.setResult(first - second);
+            case "*" -> resp.setResult(first * second);
+            case "/" -> resp.setResult(first / second);
+            case "^" -> resp.setResult((float) Math.pow(first, second));
+            default -> resp.setMessage("invalid operator");
         }
         return resp;
     }

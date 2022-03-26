@@ -25,13 +25,11 @@ public class SoapWSConfig {
 
     @Bean(name = "calculator")
     public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema schema) {
-        System.out.println("defaultWsdl11Definition");
         DefaultWsdl11Definition defaultWsdl11Definition = new DefaultWsdl11Definition();
         defaultWsdl11Definition.setPortTypeName("Calculator");
         defaultWsdl11Definition.setLocationUri("/ws");
-        defaultWsdl11Definition.setTargetNamespace("test");
+        defaultWsdl11Definition.setTargetNamespace("http://www.baeldung.com/springsoap/gen");
         defaultWsdl11Definition.setSchema(schema);
-        System.out.println(defaultWsdl11Definition);
         return defaultWsdl11Definition;
     }
 
